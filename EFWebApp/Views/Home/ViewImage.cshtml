@@ -1,0 +1,16 @@
+﻿@using EFWebApp.Data
+@model Image
+
+<div class="card mt-4">
+    <h2>@Model.Title</h2>
+    <img class="card-img-top img-fluid" style="height: 400px;" src="~/uploads/@Model.Name" alt="">
+    <br />
+    <button class="btn btn-danger" id="like" data-id=@Model.Id>Like</button>
+    @*<label id="number-of-likes" data-id=@Model.Id> Likes: @Model.Likes</label>*@
+    <p id="number-of-likes" data-id=@Model.Id>Likes: @Model.Likes</p>
+</div>
+
+
+@section scripts{
+    <script src="~/js/index.js"></script>
+}
